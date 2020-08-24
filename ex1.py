@@ -10,7 +10,7 @@ while True:
             result += num
         else:
             result += num + random.choice(para)
-    
+
     if target == eval(result):
         break
     result = ''

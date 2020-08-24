@@ -1,5 +1,5 @@
-x = 20
-y = 29
+x = 10
+y = 20
 count = 0
 while True:
     if x < y:
