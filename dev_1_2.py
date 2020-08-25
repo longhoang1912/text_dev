@@ -2,7 +2,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 url = 'http://45.79.43.178/source_carts/wordpress/wp-login.php?redirect_to=http%3A%2F%2F45.79.43.178%2Fsource_carts%2Fwordpress%2Fwp-admin%2F&reauth=1'
-driver = webdriver.Firefox()
+driver = webdriver.Chrome('/home/longhoang/Desktop/train_dev/chromedriver')
 user = 'admin'
 passw = '123456aA'
 driver.get(url)
