@@ -1,13 +1,41 @@
-x = 10
-y = 20
-count = 0
-while True:
-    if x < y:
-        x = x * 2
-    elif x > y:
-        x = x - 1
+x = 7
+y = 77
 
+
+if y % 2 == 1:
+    count = 1
+    while x * 2 < y:
+        x = x * 2
+        count += 1
+        print(f'operator {count}: x={x}, y={y}')
+    left_bound = int(y / 2) + 1
+    while x  > left_bound:
+        x = x - 1
+        count += 1
+        print(f'operator {count}: x={x}, y={y}')
+    x = x * 2
     count += 1
-    if x == y:
-        break
-print(count)
+    while True:
+        if x == y:
+            break
+        x -= 1
+        count += 1
+        print(f'operator {count}: x={x}, y={y}')
+else:
+    count = 0
+    while True:
+        if x * 2 < y:
+            x = x * 2
+            count += 1
+            print(f'operator {count}: x={x}, y={y}')
+        elif x * 2 > y:
+            x = x - 1
+            count += 1
+            print(f'operator {count}: x={x}, y={y}')
+        elif x * 2 == y:
+            x = y
+            count += 1
+            print(f'operator {count}: x={x}, y={y}')
+            break
+        if x == y:
+            break    
