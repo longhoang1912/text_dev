@@ -1,7 +1,7 @@
-x = 7
-y = 20
+x = int(input("Nhap x :"))
+y = int(input("Nhap y :"))
 if y % 2 == 1:
-    count = 1
+    count = 0
     while x * 2 < y:
         x = x * 2
         count += 1
@@ -20,7 +20,7 @@ if y % 2 == 1:
         count += 1
         print(f'operator {count}: x={x}, y={y}')
 else:
-    count = 1
+    count = 0
     while True:
         if x * 2 < y:
             x = x * 2
@@ -35,6 +35,6 @@ else:
             count += 1
             print(f'operator {count}: x={x}, y={y}')
             break
-        if x == y:
-            break
+        # if x == y:
+        #     break
 print("So buoc nho nhat de x = y la : ", count)
