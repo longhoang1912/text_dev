@@ -1,40 +1,14 @@
 x = int(input("Nhap x :"))
 y = int(input("Nhap y :"))
-if y % 2 == 1:
-    count = 0
-    while x * 2 < y:
-        x = x * 2
-        count += 1
-        print(f'operator {count}: x={x}, y={y}')
-    left_bound = int(y / 2) + 1
-    while x > left_bound:
-        x = x - 1
-        count += 1
-        print(f'operator {count}: x={x}, y={y}')
-    x = x * 2
+tmp_y = y
+count = 0
+while x < y:
+    if y % 2 == 0:
+        y = y / 2
+    else:
+        y = y + 1
     count += 1
-    while True:
-        if x == y:
-            break
-        x -= 1
-        count += 1
-        print(f'operator {count}: x={x}, y={y}')
-else:
-    count = 0
-    while True:
-        if x * 2 < y:
-            x = x * 2
-            count += 1
-            print(f'operator {count}: x={x}, y={y}')
-        elif x * 2 > y:
-            x = x - 1
-            count += 1
-            print(f'operator {count}: x={x}, y={y}')
-        elif x * 2 == y:
-            x = y
-            count += 1
-            print(f'operator {count}: x={x}, y={y}')
-            break
-        # if x == y:
-        #     break
-print("So buoc nho nhat de x = y la : ", count)
+while y < x:
+    y += 1
+    count += 1
+print("Result = ", count)
