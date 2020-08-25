@@ -1,7 +1,5 @@
 x = 7
-y = 77
-
-
+y = 20
 if y % 2 == 1:
     count = 1
     while x * 2 < y:
@@ -9,7 +7,7 @@ if y % 2 == 1:
         count += 1
         print(f'operator {count}: x={x}, y={y}')
     left_bound = int(y / 2) + 1
-    while x  > left_bound:
+    while x > left_bound:
         x = x - 1
         count += 1
         print(f'operator {count}: x={x}, y={y}')
@@ -22,7 +20,7 @@ if y % 2 == 1:
         count += 1
         print(f'operator {count}: x={x}, y={y}')
 else:
-    count = 0
+    count = 1
     while True:
         if x * 2 < y:
             x = x * 2
@@ -38,4 +36,5 @@ else:
             print(f'operator {count}: x={x}, y={y}')
             break
         if x == y:
-            break    
+            break
+print("So buoc nho nhat de x = y la : ", count)
