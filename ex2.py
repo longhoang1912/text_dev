@@ -8,7 +8,9 @@ while x < y:
     else:
         y = y + 1
     count += 1
+    print(count, y)
 while y < x:
     y += 1
     count += 1
+    print(count, y)
 print("Result = ", count)
